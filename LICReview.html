@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your experience with Pawan Tiwari, Development Officer at LIC of India. Your feedback helps us serve you better.">
+    <title>Share Your Review - Pawan Tiwari | LIC of India</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            color: #333333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0066CC 0%, #004A99 100%);
+            color: white;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .welcome-section h2 {
+            color: #0066CC;
+            font-size: 26px;
+            margin-bottom: 16px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .welcome-message {
+            text-align: center;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .profile-info {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 4px solid #FFC107;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .profile-info h3 {
+            color: #0066CC;
+            font-size: 22px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .profile-info p {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .profile-info strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .tagline {
+            text-align: center;
+            font-style: italic;
+            color: #FFC107;
+            font-size: 16px;
+            margin-top: 16px;
+            font-weight: 500;
+            padding: 12px;
+            background: rgba(255, 193, 7, 0.1);
+            border-radius: 8px;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #0066CC 0%, #004A99 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 24px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+            background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .cta-button::before {
+            content: "⭐ ";
+            margin-right: 8px;
+        }
+
+        .qr-section {
+            text-align: center;
+        }
+
+        .qr-section h3 {
+            color: #0066CC;
+            font-size: 20px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .qr-code {
+            display: inline-block;
+            padding: 16px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 16px;
+        }
+
+        .qr-code img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            border-radius: 8px;
+        }
+
+        .qr-text {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-button {
+            display: block;
+            width: 100%;
+            padding: 14px 24px;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-button:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-button::before {
+            content: "📱 ";
+            margin-right: 8px;
+        }
+
+        .share-section h3 {
+            color: #0066CC;
+            font-size: 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .share-section p {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #0066CC 0%, #004A99 100%);
+            color: white;
+            text-align: center;
+            padding: 24px 20px;
+            margin-top: auto;
+        }
+
+        .footer p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .footer small {
+            font-size: 12px;
+            opacity: 0.85;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #ddd, transparent);
+            margin: 24px 0;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .card {
+                padding: 20px 16px;
+            }
+
+            .welcome-section h2 {
+                font-size: 22px;
+            }
+
+            .profile-info h3 {
+                font-size: 20px;
+            }
+
+            .cta-button {
+                font-size: 16px;
+                padding: 14px 20px;
+            }
+
+            .qr-code img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            .card {
+                padding: 36px 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>LIC OF INDIA</h1>
+        <p>Life Insurance Corporation of India</p>
+    </header>
+
+    <div class="container">
+        <div class="card welcome-section">
+            <h2>Share Your Experience</h2>
+            <p class="welcome-message">
+                Your feedback matters! Help us serve you better by sharing your experience. 
+                Your valuable review takes just a moment and means the world to us.
+            </p>
+
+            <div class="profile-info">
+                <h3>Pawan Tiwari</h3>
+                <p><strong>Designation:</strong> Development Officer</p>
+                <p><strong>Organization:</strong> LIC OF INDIA</p>
+                <p><strong>Location:</strong> Pune, Maharashtra</p>
+                <div class="tagline">"Your trust is our greatest reward."</div>
+            </div>
+
+            <a href="https://g.page/r/Cal2kGgK94zFEAE/review" target="_blank" rel="noopener noreferrer" class="cta-button">
+                Write a Google Review
+            </a>
+        </div>
+
+        <div class="card qr-section">
+            <h3>Scan to Review</h3>
+            <div class="qr-code">
+                <img src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=https://g.page/r/Cal2kGgK94zFEAE/review" alt="QR Code for Google Review" loading="lazy">
+            </div>
+            <p class="qr-text">Scan with your phone camera to leave a review instantly</p>
+        </div>
+
+        <div class="card share-section">
+            <h3>Share Review Link</h3>
+            <p>Help others share their feedback too!</p>
+            <a href="https://wa.me/?text=Please%20share%20your%20valuable%20feedback%20about%20my%20services%20at%20LIC.%20Your%20review%20helps%20us%20serve%20you%20better%3A%20https%3A%2F%2Fg.page%2Fr%2FCal2kGgK94zFEAE%2Freview" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+                Share via WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Thank you for choosing LIC — Together, we secure your tomorrow.</p>
+        <small>&copy; 2025 LIC OF INDIA. All rights reserved.</small>
+    </footer>
+</body>
+</html>
